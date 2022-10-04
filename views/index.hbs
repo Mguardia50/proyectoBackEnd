@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTOS</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <button onclick="location.href='/'">VOLVER A PRINCIPAL</button>
+    <h1>{{greetings}}</h1>
+    <h2>Operacion: {{operacion}}</h2>
+    {{#each compras}}
+    <div class="productList">
+        <h2 style="color: blue">{{this.objeto}}</h2>
+        <h2 style="color: blue">${{this.precio}}</h2>
+        <h2 style="color: blue">Stock: {{this.stock}}</h2>
+        <img src={{this.url}} style="width: 150px; height: 150px">
+        <h2>{{this.id}}</h2>
+        <form action="/productos/carrito/{{this.id}}" method="get">
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>COMPRAR</button>
+        </form>
+            
+
+    </div>
+    {{/each}}
+
+
+</body>
+</html>
+    

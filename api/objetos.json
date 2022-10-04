@@ -1,0 +1,5 @@
+[  {"id": 0, "objeto": "plumbus", "precio": 1200, "stock":8, "url":"https://th.bing.com/th/id/OIP.hl-DCPun9sntmEW5qKvkAAHaHa?pid=ImgDet&rs=1"},
+    {"id": 1, "objeto": "Fotografia (¿es esa Stevie Nicks?)", "precio": 22.88, "stock":7, "url":"https://th.bing.com/th/id/R.58406acb3f0a05bec5e0ab693343d95b?rik=ouonUPjmEmauiQ&riu=http%3a%2f%2fstatici.behindthevoiceactors.com%2fbehindthevoiceactors%2f_img%2fchars%2fstevie-nicks-the-goat-south-park-63.6.jpg&ehk=NQOFcNMz2QadL3MVh0PdZr44WgNODUNHrqemfHoxuJc%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"},
+{"id": 2, "objeto": "Caja de meeseks", "precio": 3.14159, "stock":6, "url": "https://th.bing.com/th/id/OIP.Y6MVMZBQdt5daksYVEvC_AHaD4?pid=ImgDet&rs=1"}
+] 
+

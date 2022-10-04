@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTOS</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <button onclick="location.href='/'">VOLVER A PRINCIPAL</button>
+    <form action="/productos/carrito/del/all" method="DELETE">
+            <button>ELIMINAR TODO</button>
+        </form>
+    <button onclick="location.href='/productos'">SEGUIR COMPRANDO</button>
+    {{#each compras}}
+    <div class="productList">
+        <h2 style="color: blue">{{this.objeto}}</h2>
+        <h2 style="color: blue">${{this.precio}}</h2>
+        <h2 style="color: blue">Stock: {{this.stock}}</h2>
+        <img src={{this.url}} style="width: 150px; height: 150px">
+        <form action="/productos/carrito/d/{{this.id}}" method="DELETE">
+            <button>ELIMINAR</button>
+        </form>
+            
+
+    </div>
+    {{/each}}
+
+    
+</body>
+</html>
+    

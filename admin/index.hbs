@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main>
+    <h1>Ingrese producto</h1>
+    <div style="padding: 3px; border: 2px solid black;">
+        <form action="/productos" method="post">
+            <p>Item</p>
+            <input id="nombreProducto" type="text" name="item">
+            <p>Precio</p>
+            <input id="precioProducto" type="text" name="precio">
+            <p>URL foto</p>
+            <input id="urlProducto" type="text" name="url">
+            <br>
+            <button style="margin: 3px">ENVIAR</button>
+        </form>
+
+    </div>
+
+    <div style="padding: 3px; border: 2px solid black;">
+        
+        <form action="/productos" method="get" style="margin: 10px">
+            <button>VER TODO</button>
+        </form>
+        
+    </div>
+   
+    
+    </main>
+
+
+
+  <div style="padding: 3px; border: 2px solid black;">
+
+        <div style="padding: 3px; border: 2px solid black;">
+        
+            <form action="/admin/productos/" method="get" style="margin: 10px">
+                <p>Id</p>
+                    <input type="text" name="id">
+                <button>VER ITEM</button>
+            </form>
+    
+        </div>
+        <div style="padding: 3px; border: 2px solid black;">
+            <h2>MANEJO DE STOCK</h2>
+            {{#each Items}}      
+            <form action="/productos/remp/{{this.id}}" method="put">
+                <h2>{{this.objeto}}</h2>
+                <h2>STOCK {{this.stock}}</h2>
+                <input type="text" name="stock">
+                <button type="submit" style="margin: 3px">REMPLAZAR {{this.objeto}}</button>
+            </form>
+            {{/each}}
+        </div>
+        <div style="padding: 3px; border: 2px solid black;">
+            <h2>ELIMINAR</h2>
+            <h3>IMPORTANTE: dado a que no estamos trabajando con DB y no modifica el archivo json</h3>
+            <h3>Estos cambios solo se realizan a nivel teórico, no el json</h3>
+            {{#each Items}}      
+            <form action='/productos/e/{{this.id}}' method="get">
+                <button type="submit" style="margin: 3px">ELIMINAR {{this.objeto}}</button>
+            </form>
+            {{/each}}
+        </div>
+    </div>
+
+<div style="padding: 3px; border: 2px solid black;">
+        
+            <form action="/productos/e/" method="delete" style="margin: 10px">
+                <p>ELIMINAR POR Id</p>
+                    <input type="number" name="idq">
+                <button>ELiMINAR</button>
+            </form>
+    
+        </div>
+
+</body>
+</html>
